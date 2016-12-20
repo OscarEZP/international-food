@@ -1,0 +1,33 @@
+Modulo Usuarios: {
+    Crear normal: {
+        Se debe agregar el numero de telefono, correo electronico, nombre, apellido y contraseña.
+    }Modificar: {
+        Se debe consultar, modificar el numero de telefono, correo electronico, nombre, apellido y contraseña.
+    }
+
+    Crear usuarios Venta {
+        direccion(relacion), envios a domicilio, eventos, dias disponibles de servicios, tipo de servicio(Relacion), Logo, facebook, instagram, twitter, pagina web,
+    }Modificar usuarios venta:{
+        direccion(relacion), envios a domicilio, eventos, dias disponibles, Logo, facebook, instagram, twitter, pagina web,
+    }
+
+}
+
+Modulo Producto: {
+    Crear:{
+        debe ir asociado a un usuario venta, debe especificar que tipo de comida es (vegetariana, Carnes, etc), especificar la nacionalidad de la comida,
+        nombre.
+    }
+    Modificar:{
+            debe especificar que tipo de comida es (vegetariana, Carnes, etc), especificar la nacionalidad de la comida,
+            nombre.
+    }
+    Eliminar:{
+       debe especificar que tipo de comida es (vegetariana, Carnes, etc), especificar la nacionalidad de la comida,
+       nombre.
+    }
+}
+
+Servicios: {
+    tipo de servicio.
+}
