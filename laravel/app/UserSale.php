@@ -2,14 +2,13 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class UserSale extends Model
 {
     use Notifiable;
 
-    protected $table = 'users';
+    protected $table = 'users_sale';
 
     /**
      * The attributes that are mass assignable.
@@ -17,16 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'lastname', 'phone_number'
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
+        'user_id', 'region_id', 'street', 'street_number', 'service_day', 'service_id','facebook','twitter','instagram','web'
     ];
 
     /**
@@ -34,11 +24,10 @@ class User extends Authenticatable
      * @var array
      */
     public $rules= [
-        'name' => 'required',
-        'lastname' => 'required',
-        'phone_number' => 'required',
-        'email' => 'required|email',
-        'password' => 'required',
+        'street' => 'required',
+        'street_number' => 'required',
+        'service_day' => 'required',
+
     ];
 
     /**
@@ -72,11 +61,8 @@ class User extends Authenticatable
         return $this->errors;
     }
 
-    /**
-     * Get the sale_user associated with the user.
-     */
-    public function userSale()
+    public function user()
     {
-        return $this->hasOne('App\UserSale');
+        return $this->belongsTo('App\User');
     }
 }
