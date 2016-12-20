@@ -65,4 +65,9 @@ class UserSale extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function service()
+    {
+        return $this->belongsToMany('App\Service');
+    }
 }
