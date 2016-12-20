@@ -30,7 +30,6 @@ class CreateTableUsersSale extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('region_id')->references('id')->on('direction');
-            /*$table->foreign('service_id')->references('id')->on('service');*/
         });
     }
 
